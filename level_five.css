@@ -1,18 +1,18 @@
 .container {
   display: grid;
-  grid-template-rows:repeat(4, 200px);
-  grid-template-columns:repeat( auto-fill, minmax(100px, 1fr) );
+  grid-template-rows:repeat( auto-fit, 100px );
+  grid-template-columns:repeat( auto-fit, 100px );
 }
 
 
-#siblings {
+.siblings {
   grid-column: span 2;
   grid-row:span 1;
 }
 
 
-#aunt{
-  writing-mode: vertical-rl;
+.aunt{
+
   grid-column:span 1;
   grid-row:span 2;
  
@@ -20,18 +20,24 @@
 
 
 #title {
-  grid-column:span auto;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  
 }
 
 
-#friend{
+.friend{
   grid-column:span 1;
   grid-row:span 1;  
 }
 
 
 
-#grandparents {
+.grandparents {
 grid-column:span 2;
 grid-row:span 2;
 }
+
+
+
+
